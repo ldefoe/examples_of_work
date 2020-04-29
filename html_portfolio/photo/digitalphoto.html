@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Logan Defoe's Digital Portfolio
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            div#main {height: 1500px;}
+            footer {position: absolute;
+                box-sizing: border-box;
+                top: 1460px;
+                left: 0;}
+            * {
+                box-sizing: border-box;
+            }
+            .container {
+                position: relative;
+            }
+            .mySlides {
+                display: none;
+            }
+            .cursor {
+                cursor: pointer;
+            }
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 40%;
+                width: auto;
+                padding: 16px;
+                margin-top: -50px;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+            .caption-container {
+                text-align: center;
+                font-family: courier new;
+                background-color: #222;
+                padding: 2px 16px;
+                color: white;
+            }
+            .row:after {
+                content: "";
+                display: table;
+            }
+            .column {
+                float: left;
+                width: 16.66%;
+            }
+            .demo {
+                opacity: 0.6;
+            }
+            .active,
+            .demo:hover {
+                opacity: 1;
+            }
+        </style>
+        <script>
+            var slideIndex = 1;
+                showSlides(slideIndex);
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                  var captionText = document.getElementById("caption");
+                  if (n > slides.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                  }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="main">
+            <header>
+                Logan &nbsp;Defoe &nbsp; - Portfolio
+            </header>
+            <nav>
+                <a href="../photo/">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="digitalphoto.html">Digital Photography</a>
+                <a href="filmphoto.html">Film Photography</a>
+                <a href="print.html">Printmaking</a>
+                <a href="contact.html">Contact Me</a>
+            </nav>
+            <!-- Container for the image gallery -->
+            <div class="container">
+              <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 29</div>
+                    <img src="lake_louise_alberta.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">2 / 29</div>
+                    <img src="lake_louise_long_exposure_evening_alberta.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">3 / 29</div>
+                    <img src="lake_louise_moon_alberta.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">4 / 29</div>
+                    <img src="lake_louise_stream_alberta.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">5 / 29</div>
+                    <img src="falls_near_meligne_lake_jasper_alberta.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">6 / 29</div>
+                    <img src="falls_near_meligne_lake_jasper_alberta2.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">7 / 29</div>
+                    <img src="glass&metal_walk_jasper_alberta.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">8 / 29</div>
+                    <img src="minnehaha_falls.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">9 / 29</div>
+                    <img src="minnehaha_falls_long_exposure.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">10 / 29</div>
+                    <img src="blood_moon.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">11 / 29</div>
+                    <img src="lightning_winnipeg_manitoba.jpg" style="width:100%">
+                </div> 
+                <center>
+                <div class="mySlides">
+                  <div class="numbertext">12 / 29</div>
+                    <img src="glacier_river_lake_louise_alberta.jpg" style="width:44.5%">
+                </div> 
+                <div class="mySlides">
+                  <div class="numbertext">13 / 29</div>
+                    <img src="wedding_veil_falls_jasper_alberta.jpg" style="width:44.5%">
+                </div> 
+                </center>
+                <div class="mySlides">
+                  <div class="numbertext">14 / 29</div>
+                    <img src="ground_zero_b&w.jpg" style="width:100%">
+                </div> 
+                <div class="mySlides">
+                  <div class="numbertext">15 / 29</div>
+                    <img src="ground_zero_rose.jpg" style="width:100%">
+                </div> 
+                <div class="mySlides">
+                  <div class="numbertext">16/ 29</div>
+                    <img src="ground_zero_rose2.jpg" style="width:100%">
+                </div> 
+                <div class="mySlides">
+                  <div class="numbertext">17 / 29</div>
+                    <img src="minneapolis_skyline.jpg" style="width:100%">
+                </div> 
+                <div class="mySlides">
+                  <div class="numbertext">18 / 29</div>
+                    <img src="china_town_nyc.jpg" style="width:100%">
+                </div> 
+                <div class="mySlides">
+                  <div class="numbertext">19 / 29</div>
+                    <img src="memorial_plaza_nyc.jpg" style="width:100%">
+                </div> 
+                <div class="mySlides">
+                  <div class="numbertext">20 / 29</div>
+                    <img src="skyline_themillproductions_roofdeck.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">21 / 29</div>
+                    <img src="times_square.jpg" style="width:100%">
+                </div> 
+                <div class="mySlides">
+                  <div class="numbertext">22 / 29</div>
+                    <img src="times_square_snow_storm.jpg" style="width:100%">
+                </div> 
+                <center>
+                <div class="mySlides">
+                  <div class="numbertext">23 / 29</div>
+                    <img src="china_town_nyc2.jpg" style="width:44.5%">
+                </div> 
+                <div class="mySlides">
+                  <div class="numbertext">24 / 29</div>
+                    <img src="freedom_tower_angle1.jpg" style="width:44.5%">
+                </div> 
+                <div class="mySlides">
+                  <div class="numbertext">25 / 29</div>
+                    <img src="ground_zero_b&w2.jpg" style="width:44.5%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">26 / 29</div>
+                    <img src="the_mill_productions_roof_nyc.jpg" style="width:44.5%">
+                </div>     
+                </center>
+                <div class="mySlides">
+                  <div class="numbertext">27 / 29</div>
+                    <img src="weisman_museum_twincities.jpg" style="width:100%">
+                </div> 
+                <div class="mySlides">
+                  <div class="numbertext">28 / 29</div>
+                    <img src="my_eye.jpg" style="width:100%">
+                </div> 
+                <center>
+                <div class="mySlides">
+                  <div class="numbertext">29 / 29</div>
+                    <img src="stephen_avenue_mall_8th_ave_calgary.jpg" style="width:50%">
+                </div>     
+                </center>
+                
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <!-- Image text -->
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+              <!-- Thumbnail images -->
+              <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="lake_louise_alberta.jpg" style="width:100%" onclick="currentSlide(1)" alt="Lake Louise, AB, Canada">
+                  </div>
+                  <div class="column"> 
+                    <img class="demo cursor" src="lake_louise_long_exposure_evening_alberta.jpg" style="width:100%" onclick="currentSlide(2)" alt="Lake Louise, AB, Canada">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="lake_louise_moon_alberta.jpg" style="width:100%" onclick="currentSlide(3)" alt="Lake Louise, AB, Canada">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="lake_louise_stream_alberta.jpg" style="width:100%" onclick="currentSlide(4)" alt="Lake Louise, AB, Canada">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="falls_near_meligne_lake_jasper_alberta.jpg" style="width:100%" onclick="currentSlide(5)" alt="Meligne Lake, AB, Canada">
+                  </div> 
+                  <div class="column">
+                    <img class="demo cursor" src="falls_near_meligne_lake_jasper_alberta2.jpg" style="width:100%" onclick="currentSlide(6)" alt="Meligne Lake, AB, Canada">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="glass&metal_walk_jasper_alberta.jpg" style="width:100%" onclick="currentSlide(7)" alt="Jasper, AB, Canada">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="minnehaha_falls.jpg" style="width:100%" onclick="currentSlide(8)" alt="Minnehaha Falls - Minneapolis, MN">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="minnehaha_falls_long_exposure.jpg" style="width:100%" onclick="currentSlide(9)" alt="Minnehaha Falls - Minneapolis, MN">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="blood_moon.jpg" style="width:100%" onclick="currentSlide(10)" alt="Blood Moon - Saint Paul, MN">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="lightning_winnipeg_manitoba.jpg" style="width:100%" onclick="currentSlide(11)" alt="Lightning - Winnipeg, MB, Canada">
+                  </div>
+                  <center>
+                  <div class="column">
+                    <img class="demo cursor" src="glacier_river_lake_louise_alberta.jpg" style="width:44.5%" onclick="currentSlide(12)" alt="Lake Louise, AB, Canada">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="wedding_veil_falls_jasper_alberta.jpg" style="width:44.4%" onclick="currentSlide(13)" alt="Wedding Veil Falls, AB, Canada">
+                  </div>
+                  </center>
+                  <div class="column">
+                    <img class="demo cursor" src="ground_zero_b&w.jpg" style="width:100%" onclick="currentSlide(14)" alt="Ground Zero - New York, NY">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="ground_zero_rose.jpg" style="width:100%" onclick="currentSlide(15)" alt="Ground Zero - New York, NY">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="ground_zero_rose2.jpg" style="width:100%" onclick="currentSlide(16)" alt="Ground Zero - New York, NY">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="minneapolis_skyline.jpg" style="width:100%" onclick="currentSlide(17)" alt="Minneapolis, MN">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="china_town_nyc.jpg" style="width:100%" onclick="currentSlide(18)" alt="Chinatown - New York, NY">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="memorial_plaza_nyc.jpg" style="width:100%" onclick="currentSlide(19)" alt="Memorial Plaza - New York, NY">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="skyline_themillproductions_roofdeck.jpg" style="width:100%" onclick="currentSlide(20)" alt="SoHo - New York, NY">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="times_square.jpg" style="width:100%" onclick="currentSlide(21)" alt="Time Square - New York, NY">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="times_square_snow_storm.jpg" style="width:100%" onclick="currentSlide(22)" alt="Time Square - New York, NY">
+                  </div>
+                  <center>
+                  <div class="column">
+                    <img class="demo cursor" src="china_town_nyc2.jpg" style="width:44.5%" onclick="currentSlide(23)" alt="Chinatown - New York, NY">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="freedom_tower_angle1.jpg" style="width:44.5%" onclick="currentSlide(24)" alt="New York, NY">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="ground_zero_b&w2.jpg" style="width:44.5%" onclick="currentSlide(25)" alt="Ground Zero - New York, NY">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="the_mill_productions_roof_nyc.jpg" style="width:44.5%" onclick="currentSlide(26)" alt="SoHo - New York, NY">
+                  </div>
+                  </center>
+                  <div class="column">
+                    <img class="demo cursor" src="weisman_museum_twincities.jpg" style="width:100%" onclick="currentSlide(27)" alt="U of M Weisman Museum - Minneapolis, MN">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="my_eye.jpg" style="width:100%" onclick="currentSlide(28)" alt="Eye">
+                  </div>
+                  <center>
+                  <div class="column">
+                    <img class="demo cursor" src="stephen_avenue_mall_8th_ave_calgary.jpg" style="width:50%" onclick="currentSlide(29)" alt="Stephen Avenue Mall - Calgary, AB, Canada">
+                  </div>
+                  </center>
+                  
+              </div>
+            </div>
+            <article>
+            
+            </article>
+            <footer>
+                &copy; 2018 - Logan Defoe - <a href="about.html">About</a>
+            </footer>
+        </div>
+        <script>
+            showSlides(slideIndex);
+        </script>
+    </body>
+</html>

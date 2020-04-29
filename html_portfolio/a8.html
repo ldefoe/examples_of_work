@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Roll the Dice!
+        </title>
+        <style>
+            body {background-color: darkgreen;}
+            div#main {position: static;
+                box-sizing: border-box;
+                background-color: lightgreen;
+                width: 600px;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;}
+            h1 {margin-top: 0px;
+                margin-bottom: 0px;}
+        </style>
+        <script>
+            // create a global variable for totalRolls
+            var totalRolls = new Number;
+            // create a globan variable for totalSevens
+            var totalSevens = new Number;
+            // create a global variable for totalDoubles
+            var totalDoubles = new Number;
+            // create a function called rollDice()
+            function rollDice() {
+                // create a local variable called die1
+                var die1 = new Number;
+                // set the value of die1 between 1 and 6
+                die1 = Math.floor(Math.random() * 6) + 1;
+                // change the src of die1image
+                document.getElementById("die1image").src = die1 + ".png";
+                // create a local variable called die2
+                var die2 = new Number;
+                // set the value of die2 between 1-6
+                die2 = Math.floor(Math.random() * 6) + 1;
+                // change the src of die2image
+                document.getElementById("die2image").src = die2 + ".png";
+                // create a variable called diceTotal
+                var diceTotal = new Number;
+                // set the value of diceTotal
+                diceTotal = die1 + die2;
+                // put diceTotal into diceTotalText
+                document.getElementById("diceTotalText").innerHTML = diceTotal;
+                // add 1 to total rolls every time button is clicked
+                totalRolls = totalRolls + 1;
+                // update totalRollsText
+                document.getElementById("totalRollsText").innerHTML = totalRolls;
+                // check for doubles
+                if (die1 == die2) {
+                    // add one to total doubles
+                    totalDoubles = totalDoubles + 1;
+                    // update totalDoublesText
+                    document.getElementById("totalDoublesText").innerHTML = totalDoubles;
+                    } // end of check doubles
+                // check for sevens
+                else if (diceTotal == 7) {
+                    // add one to total sevens
+                    totalSevens = totalSevens + 1;
+                    // update totalSevensText
+                    document.getElementById("totalSevensText").innerHTML = totalSevens;
+                } // end of check sevens
+                // dynamic text based on diceTotal()
+                // if you roll a 2
+                if (diceTotal == 2) {
+                    document.getElementById("messageText").innerHTML = "You Lose!";
+                    document.body.style.backgroundColor = "red";
+                    document.getElementById('button1').disabled = true;
+                }
+                // if you roll a 7
+                else if (diceTotal == 7) {
+                    document.getElementById("messageText").innerHTML = "Lucky Number Seven!";
+                }
+                // if you roll an 11
+                else if (diceTotal == 11) {
+                    document.getElementById("messageText").innerHTML = "So close...";
+                }            
+                // if you roll a 12
+                else if (diceTotal == 12) {
+                    document.getElementById("messageText").innerHTML = "YOU WIN!";
+                    document.body.style.backgroundColor = "yellow";
+                    document.getElementById('button1').disabled = true;
+                }
+                // everything else
+                else if (diceTotal == 3) {
+                    document.getElementById("messageText").innerHTML = "Try again...";
+                }
+                else if (diceTotal == 4) {
+                    document.getElementById("messageText").innerHTML = "Try again...";
+                }
+                else if (diceTotal == 5) {
+                    document.getElementById("messageText").innerHTML = "Try again...";
+                }
+                else if (diceTotal == 6) {
+                    document.getElementById("messageText").innerHTML = "Try again...";
+                }
+                else if (diceTotal == 8) {
+                    document.getElementById("messageText").innerHTML = "Try again...";
+                }
+                else if (diceTotal == 9) {
+                    document.getElementById("messageText").innerHTML = "Try again...";
+                }
+                else {
+                    document.getElementById("messageText").innerHTML = "Try again...";
+                }
+            } // end of rollDice() function
+        </script>
+    </head>
+    <body onload="document.getElementById('button1').disabled=false;">
+        <div id="main">
+            <h1> 
+                Roll the Dice 
+            </h1>
+            <img src="0.png" alt="die" id="die1image">
+            +
+            <img src="0.png" alt="die" id="die2image">
+            =
+            <span id="diceTotalText">
+                ??
+            </span>
+            <br>
+            <input type="button" id="button1" value="Roll the Dice" onclick="rollDice();">
+            <p id="messageText">
+            &nbsp;
+            </p>
+            <p>
+                Number of Total Rolls:
+                <span id="totalRollsText">
+                0
+                </span>
+            </p>
+            <p>
+                Number of Sevens Rolled:
+                <span id="totalSevensText">
+                0
+                </span>
+            </p>
+            <p>
+                Number of Doubles Rolled:
+                <span id="totalDoublesText">
+                0
+                </span>
+            </p>
+            <br>
+        </div>
+    </body>
+</html>

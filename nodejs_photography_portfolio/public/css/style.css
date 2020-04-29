@@ -1,0 +1,74 @@
+@font-face {font-family: my_font_1;
+    src: url(MAGNETOB.TTF);}
+
+@font-face {font-family: my_font_2;
+    src: url(bahnschrift.ttf);}
+
+body {
+  margin: 0;
+  padding-top: 150px;
+  font-family: "my_font_2";
+  color: #625a56;
+  background-color: #b9b9b9;
+}
+
+#nav {
+  width: 100%;
+  height: 110px;
+  padding: 20px 0 5px 0;
+  border-bottom: solid 8px #3b3b3b;
+  box-shadow: 10px 10px 10px #242424;
+  position: absolute;
+  top: 0;
+}
+
+.galleria { 
+  margin-left: 27%;
+  margin-top: 5%;
+  width: 700px; 
+  height: 400px; 
+  background: #000;
+  position: absolute;
+}
+
+#title {
+  color: #625a56;
+  margin: 0;
+  font-family: "my_font_1";
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+#nav a {
+  text-decoration: none;
+}
+
+.nav-align {
+  text-align: center;
+  padding: 3px 0;
+}
+
+.container {
+  padding: 0% 10%;
+}
+
+.button {
+  background-color: #002950;
+  padding: 0.3vw 3vw;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #000622;
+  color: #c4c4c4;
+}

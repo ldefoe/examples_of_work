@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Math with JavaScript
+        </title>
+        <style>
+            body {background-color: lightblue;
+                font-size: 24px;}
+            input {font-size: 24px;}
+            input:hover {background-color: lightgreen;}
+        </style>
+        <script>
+            //function to add two numbers together
+            function addNumbers() {
+                // make a variable for value of box1
+                var value1 = parseFloat(document.getElementById("box1").value);
+                // make a variable for value of box2
+                var value2 = parseFloat(document.getElementById("box2").value);
+                // make a variable called total
+                var total = value1 + value2;
+                // put total in output span
+                document.getElementById("output").innerHTML = total;
+                // put + sign in the sign span
+                document.getElementById("sign").innerHTML = "+";
+            } // end of add numbers function
+            function subtractNumbers() {
+                // make a variable for value of box1
+                var value1 = parseFloat(document.getElementById("box1").value);
+                // make a variable for value of box2
+                var value2 = parseFloat(document.getElementById("box2").value);
+                // make a variable called total
+                var total = value1 - value2;
+                // put total in output span
+                document.getElementById("output").innerHTML = total;
+                // put - sign in the sign span
+                document.getElementById("sign").innerHTML = "-";
+            } // end of subtract numbers function
+            function multiplyNumbers() {
+                // make a variable for value of box1
+                var value1 = parseFloat(document.getElementById("box1").value);
+                // make a variable for value of box2
+                var value2 = parseFloat(document.getElementById("box2").value);
+                // make a variable called total
+                var total = value1 * value2;
+                // put total in output span
+                document.getElementById("output").innerHTML = total;
+                // put x sign in the sign span
+                document.getElementById("sign").innerHTML = "x";
+            }
+            function divideNumbers() {
+                // make a variable for value of box1
+                var value1 = parseFloat(document.getElementById("box1").value);
+                // make a variable for value of box2
+                var value2 = parseFloat(document.getElementById("box2").value);
+                // make a variable called total
+                var total = value1 / value2;
+                // put total in output span
+                document.getElementById("output").innerHTML = total;
+                // put divide sign in the sign span
+                document.getElementById("sign").innerHTML = "&divide;";
+            }
+            function clearNumbers() {
+                document.getElementById("box1").value = "";
+                document.getElementById("box2").value = "";
+                // put total in output span
+                document.getElementById("output").innerHTML = "";
+                // put divide sign in the sign span
+                document.getElementById("sign").innerHTML = "&nbsp;";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            Math with JavaScript
+        </h1>
+        <input type="text" size="5" id="box1">
+        <span id="sign">
+            &nbsp;
+        </span>
+        <input type="text" size="5" id="box2">
+        =
+        <span id="output">
+            &nbsp;
+        </span>
+        <br><br>
+        <input type="button" value="add" onclick="addNumbers();">
+        <input type="button" value="subtract" onclick="subtractNumbers();">
+        <input type="button" value="multiply" onclick="multiplyNumbers();">
+        <input type="button" value="divide" onclick="divideNumbers();">
+        <input type="button" value="clear" onclick="clearNumbers()";>
+        <!-- put other buttons here -->
+    </body>
+</html>

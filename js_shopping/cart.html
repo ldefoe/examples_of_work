@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Final Project </title>
+  <!-- <link rel="stylesheet" type="text/css" href="cart.css"> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Handlebars items -->
+<div class = "container">
+  <div class = "row">
+    <div class= "searchContainer col">
+      <input class="search col-md" type="text" placeholder="Enter Product"/>
+    </div>
+  </div>
+  <div class = "row">
+    <div class="pagination col">
+      <a href="#" data-page="1" class="prev">&laquo; &nbsp;</a>
+      <a href="#" class="next">&nbsp; &raquo;</a>
+    </div>
+  </div>
+  <div  class = "row">
+    <div class="items col-lg"></div>
+
+    <div class="cartContainer col-lg">
+      <div class="cart col-md"></div>
+        <div class = "price"></div>
+        <button class="btn btn-success" onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+    <br>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>
+
+
+
